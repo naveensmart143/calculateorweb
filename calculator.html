@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JESUS</title>
+    <link rel="stylesheet" href="./claculator.css" />
+    <script type="application/javascript" defer src="calculator.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header"><h2>CALCULATOR WEBSITE</h2></div>
+      <div class="heade_feilds">
+        <button class="btn cal" onclick="showCalculator()">CALCULATOR</button>
+        <button class="btn" onclick="check()">SHOW HISTORY</button>
+        <button class="btn" onclick="clear_history()">DELETE HISTORY</button>
+      </div>
+    </header>
+    <main>
+      <div class="calculator">
+        <form name="form1">
+          <input class="textview" name="textview" autofocus="true" />
+        </form>
+        <table>
+          <tr>
+            <td>
+              <button
+                class="btn"
+                type="button"
+                onclick="form1.textview.value = '' "
+              >
+                CLEAR
+              </button>
+            </td>
+            <td>
+              <button
+                class="btn"
+                type="button"
+                value="BACKSPACE"
+                onclick="backspace()"
+              >
+                BACK
+              </button>
+            </td>
+            <td>
+              <button class="btn" type="button" value="/" onclick="insert('/')">
+                /
+              </button>
+            </td>
+            <td>
+              <button class="btn" type="button" value="x" onclick="insert('*')">
+                *
+              </button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <button class="btn" type="button" value="7" onclick="insert(7)">
+                7
+              </button>
+            </td>
+            <td>
+              <button class="btn" type="button" value="8" onclick="insert(8)">
+                8
+              </button>
+            </td>
+            <td>
+              <button class="btn" type="button" value="9" onclick="insert(9)">
+                9
+              </button>
+            </td>
+            <td>
+              <button class="btn" type="button" value="-" onclick="insert('-')">
+                -
+              </button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <button class="btn" type="button" value="4" onclick="insert(4)">
+                4
+              </button>
+            </td>
+            <td>
+              <button class="btn" type="button" value="5" onclick="insert(5)">
+                5
+              </button>
+            </td>
+            <td>
+              <button class="btn" type="button" value="6" onclick="insert(6)">
+                6
+              </button>
+            </td>
+            <td>
+              <button class="btn" type="button" value="+" onclick="insert('+')">
+                +
+              </button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <button class="btn" type="button" value="1" onclick="insert(1)">
+                1
+              </button>
+            </td>
+            <td>
+              <button class="btn" type="button" value="2" onclick="insert(2)">
+                2
+              </button>
+            </td>
+            <td>
+              <button class="btn" type="button" value="3" onclick="insert(3)">
+                3
+              </button>
+            </td>
+            <td rowspan="5">
+              <button
+                class="btn"
+                style="height: 110px"
+                type="button"
+                value="="
+                onclick="equal()"
+              >
+                EQUAL
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button
+                class="btn"
+                style="width: 200px"
+                type="button"
+                value="0"
+                onclick="insert(0)"
+              >
+                0
+              </button>
+            </td>
+            <td>
+              <button
+                class="btn"
+                style="align-self: flex-start"
+                type="button"
+                value="."
+                onclick="insert('.')"
+              >
+                DEC(.)
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="history_tab">
+        <div class="history_name">HISTORY</div>
+        <div class="history_list"></div>
+      </div>
+      <div class="welcome_line">CALCULATOR</div>
+    </main>
+    <footer><p>ALL COPYRIGHTS ARE RESERVED</p></footer>
+  </body>
+</html>
